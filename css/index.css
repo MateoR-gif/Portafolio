@@ -1,0 +1,178 @@
+
+/* GENERAL FORMATTING */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* END GENERAL FORMATTING */
+
+/* CONTAINERS */
+
+.container{
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* END CONTAINERS */
+
+/* HEADER */
+
+.header{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "header__content";
+    background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    min-height: 100vh;
+}
+
+    /* NAV */
+
+    .nav{
+        display: grid;
+        justify-content: space-between;
+        grid-auto-flow: column;
+        grid-area: nav;
+        gap: 1em;
+        align-items: center;
+        height: 90px;
+    }
+
+    .nav__logo{
+        font-size: 1.8rem;
+        font-weight: 300;
+        background: #bcccbd;
+        border-radius: 50%;
+        padding: 10px;
+        color: #171817;
+        text-align: center;
+        visibility: visible;
+        
+        transition: all 0.2s;
+    }
+
+    .nav__logo:hover{
+        color: white;
+        font-weight: 800;
+        font-size: 2.3rem;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .nav__list{
+        font-size: 1.3rem;
+        list-style: none;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .nav__link{
+        text-decoration: none;
+        color: #171817;
+        background: #c1dfc4;
+        padding: 10px;
+        border-radius: 3px;
+        transition: color 0.3s;
+    }
+
+    .nav__link:hover{
+        color: white;
+    }
+
+    .nav__menu__icon{
+        display: none;
+    }
+
+
+    /* END NAV */
+
+    /* HEADER CONTENT */
+
+    .header__main{
+        display: grid;
+        gap: 2em;
+        grid-area: header__content;
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 180px;
+        align-items: center;
+    }
+
+    .header__texts{
+        display: grid;
+    }
+
+    .header__title{
+        font-size: 2.6rem;
+        letter-spacing: 2px;
+        position: relative;
+        float: left;
+    }
+
+    .header__title span{
+        position: absolute;
+        right: 0;
+        width: 0;
+        background: #d3e7d3;
+        border-left: 2px solid #171817;
+        white-space: nowrap;
+        width: 24ch;
+        animation: escribir 3s infinite alternate steps(24);
+    }
+
+    @keyframes escribir{
+        from{
+            width: 100%;
+        }
+        to {
+            width: 0;
+        }
+    }
+
+    .header__description{
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .header__button{
+        text-decoration: none;
+        color: #171817;
+        padding: 8px 12px;
+        background: #c1dfc4;
+        border: 2px solid #bcccbd;
+        border-radius: 6px;
+        display: inline-block;
+        font-size: large;
+        font-weight: 800;
+        transition: all .3s;
+    }
+
+    .header__button:hover{
+        background-color: #deecdd;
+        color: #59645a;
+        padding: 13px 40px;
+    }
+
+    .header__wave{
+        display: grid;
+        grid-area: header__content;
+        align-self: end;
+    }
+
+    .header__img{
+        width: 100%;
+    }
+
+    /* END HEADER CONTENT */
+
+/* END HEADER */
