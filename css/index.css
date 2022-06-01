@@ -125,7 +125,7 @@
         border-left: 2px solid #171817;
         white-space: nowrap;
         width: 24ch;
-        animation: escribir 3s infinite alternate steps(24);
+        animation: escribir 4s infinite alternate steps(24);
     }
 
     @keyframes escribir{
